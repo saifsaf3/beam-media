@@ -1,11 +1,9 @@
-const equipmentTikTok =
-  "https://www.tiktok.com/player/v1/7659537226765831446?music_info=0&description=0&rel=0&native_context_menu=0";
+import Image from "next/image";
+import Link from "next/link";
+import { Arrow, ayubWhatsApp, SiteFooter, SiteHeader } from "./_components/SiteChrome";
 
-const harborneTikTok =
-  "https://www.tiktok.com/player/v1/7667116178875157782?music_info=0&description=0&rel=0&native_context_menu=0";
-
-const whatsappLink =
-  "https://wa.me/447508182314?text=Hey%20Beam%20Media%20%E2%80%94%20I%27d%20love%20to%20talk%20about%20content%20for%20my%20business.";
+const tiktokPlayer = (videoId: string) =>
+  `https://www.tiktok.com/player/v1/${videoId}?music_info=0&description=0&rel=0&native_context_menu=0`;
 
 const services = [
   {
@@ -37,29 +35,45 @@ const process = [
   ["04", "Get it moving", "Ready-to-post content made to earn attention."],
 ];
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
+const feedWork = [
+  {
+    name: "Stechford Local",
+    type: "Retail · Local supermarket",
+    note: "12.8K on a pinned local-first video",
+    videoId: "7612729315465235734",
+    colour: "feed-lime",
+  },
+  {
+    name: "Madina Gift Shop",
+    type: "Retail · Gifts + lifestyle",
+    note: "Products framed to stop the scroll",
+    videoId: "7652800877278842134",
+    colour: "feed-red",
+  },
+  {
+    name: "Kiran’s Balti",
+    type: "Hospitality · Restaurant",
+    note: "Food content with heat and personality",
+    videoId: "7665867943481199894",
+    colour: "feed-green",
+  },
+];
+
+const clients = [
+  "Equipment Bazaar",
+  "Harborne Indian Kitchen",
+  "Stechford Local",
+  "Madina Gift Shop",
+  "Kiran’s Balti",
+  "Rajbari Kitchen",
+];
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Beam Media home">
-          <span className="brand-mark">BM.</span>
-          <span className="brand-name">Beam Media</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-        </nav>
-        <a className="header-cta" href={whatsappLink} target="_blank" rel="noreferrer">
-          Start a project <Arrow />
-        </a>
-      </header>
+    <main id="top">
+      <SiteHeader />
 
-      <section className="hero" id="top">
+      <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Birmingham, UK · Short-form studio</p>
           <h1>
@@ -82,19 +96,20 @@ export default function Home() {
 
         <div className="hero-visual" aria-label="Beam Media client work">
           <div className="hero-stamp">Content<br />that hits</div>
-          <img
+          <Image
             className="hero-equipment"
             src="/equipment-bazaar.jpg"
             alt="Beam Media short-form content for Equipment Bazaar"
-            width="900"
-            height="1400"
+            fill
+            sizes="(max-width: 1050px) 74vw, 35vw"
+            priority
           />
           <div className="hero-phone">
-            <img
+            <Image
               src="/harborne-indian-kitchen.jpg"
               alt="Harborne Indian Kitchen captured by Beam Media"
-              width="720"
-              height="1280"
+              fill
+              sizes="(max-width: 760px) 39vw, 16vw"
             />
             <span className="play-button" aria-hidden="true">▶</span>
             <p>Harborne Indian Kitchen</p>
@@ -126,6 +141,13 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="client-ribbon" aria-label="Brands we have created content for">
+        <p>Seen on the feed</p>
+        <div>
+          {clients.map((client) => <span key={client}>{client}</span>)}
+        </div>
+      </section>
+
       <section className="work" id="work" aria-labelledby="work-title">
         <div className="section-heading">
           <p className="section-label">Selected work</p>
@@ -153,7 +175,7 @@ export default function Home() {
           </div>
           <div className="case-media red-media">
             <iframe
-              src={equipmentTikTok}
+              src={tiktokPlayer("7659537226765831446")}
               title="Beam Media TikTok for Equipment Bazaar"
               loading="lazy"
               allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
@@ -166,7 +188,7 @@ export default function Home() {
         <article className="case-study case-harborne">
           <div className="case-media green-media">
             <iframe
-              src={harborneTikTok}
+              src={tiktokPlayer("7667116178875157782")}
               title="Beam Media TikTok for Harborne Indian Kitchen"
               loading="lazy"
               allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
@@ -192,6 +214,35 @@ export default function Home() {
         </article>
       </section>
 
+      <section className="feed-work" aria-labelledby="feed-work-title">
+        <div className="feed-work-heading">
+          <p className="section-label">More from the feed</p>
+          <h2 id="feed-work-title">Local brands.<br /><em>Big energy.</em></h2>
+          <p>From retail counters to restaurant kitchens, every brand gets its own rhythm.</p>
+        </div>
+        <div className="feed-grid">
+          {feedWork.map((item, index) => (
+            <article className={`feed-card ${item.colour}`} key={item.name}>
+              <div className="feed-card-top">
+                <span>0{index + 3}</span>
+                <p>{item.type}</p>
+              </div>
+              <div className="feed-frame">
+                <iframe
+                  src={tiktokPlayer(item.videoId)}
+                  title={`Beam Media TikTok for ${item.name}`}
+                  loading="lazy"
+                  allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3>{item.name}</h3>
+              <p>{item.note}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="services" id="services" aria-labelledby="services-title">
         <div className="section-heading light-heading">
           <p className="section-label">What we make</p>
@@ -214,9 +265,7 @@ export default function Home() {
         <div className="process-intro">
           <p className="section-label">How it works</p>
           <h2 id="process-title">From idea<br />to feed.</h2>
-          <p>
-            Clear, collaborative and built to keep the good ideas moving.
-          </p>
+          <p>Clear, collaborative and built to keep the good ideas moving.</p>
         </div>
         <ol className="process-list">
           {process.map(([number, title, copy]) => (
@@ -232,38 +281,17 @@ export default function Home() {
       <section className="cta" aria-labelledby="cta-title">
         <p className="section-label">Your move</p>
         <h2 id="cta-title">Ready to look<br /><em>unmissable?</em></h2>
-        <p>
-          Tell us about your business. We&apos;ll bring the ideas, cameras and edits.
-        </p>
-        <a href={whatsappLink} target="_blank" rel="noreferrer">
-          Let&apos;s make something <Arrow />
-        </a>
+        <p>Tell us about your business. We&apos;ll bring the ideas, cameras and edits.</p>
+        <Link href="/contact">Meet the team <Arrow /></Link>
         <span className="cta-note">Birmingham based · Available across the UK</span>
       </section>
 
-      <footer>
-        <div className="footer-brand">
-          <img src="/beam-media-mark.jpg" alt="Beam Media" width="720" height="720" />
-          <p>Short-form content for businesses worth watching.</p>
-        </div>
-        <div className="footer-links">
-          <div>
-            <p>Social</p>
-            <a href="https://www.tiktok.com/@beammedia0" target="_blank" rel="noreferrer">TikTok <Arrow /></a>
-            <a href="https://www.instagram.com/beammedia_/?hl=en" target="_blank" rel="noreferrer">Instagram <Arrow /></a>
-          </div>
-          <div>
-            <p>Contact</p>
-            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp <Arrow /></a>
-            <a href="mailto:beam.mediauk@gmail.com">Email <Arrow /></a>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2026 Beam Media</p>
-          <p>Birmingham, UK</p>
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </footer>
+      <section className="quick-contact" aria-label="Quick contact">
+        <p>Ready now?</p>
+        <a href={ayubWhatsApp} target="_blank" rel="noreferrer">Message Beam Media on WhatsApp <Arrow /></a>
+      </section>
+
+      <SiteFooter />
     </main>
   );
 }
