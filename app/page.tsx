@@ -97,15 +97,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="simple-client-strip" aria-label="Beam Media clients">
-        <p>Content created for</p>
+      <section className="simple-client-strip" aria-label="Clients Beam Media has worked with">
+        <p>Clients we&apos;ve worked with</p>
         <div>
           <span>Equipment Bazaar</span>
           <span>Harborne Indian Kitchen</span>
           <span>Stechford Local</span>
           <span>Madina Gift Shop</span>
           <span>Kiran’s Balti</span>
-          <span>Rajbari Kitchen</span>
+          <span>Liquid Print</span>
+          <span>Rajbari</span>
         </div>
       </section>
 
