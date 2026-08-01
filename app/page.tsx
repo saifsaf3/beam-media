@@ -76,12 +76,17 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Birmingham, UK · Short-form studio</p>
-          <h1>
-            <span className="hero-line">Make them</span>
-            <span className="hero-line hero-accent">stop.</span>
-            <span className="hero-line">Make them</span>
-            <span className="hero-line hero-accent">watch.</span>
-          </h1>
+          <div className="hero-title-block">
+            <h1>
+              <span className="hero-line">Make them</span>
+              <span className="hero-line hero-accent">stop.</span>
+              <span className="hero-line">Make them</span>
+              <span className="hero-line hero-accent">watch.</span>
+            </h1>
+            <Link className="hero-project-cta" href="/contact">
+              Start a project <Arrow />
+            </Link>
+          </div>
           <div className="hero-bottom">
             <p>
               Beam Media creates scroll-stopping social content for restaurants,

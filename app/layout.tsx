@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     "Beam Media",
   ],
   icons: {
-    icon: "/beam-media-mark.jpg",
-    apple: "/beam-media-mark.jpg",
+    icon: "/beam-media-logo-official.png",
+    apple: "/beam-media-logo-official.png",
   },
   openGraph: {
     title: "Beam Media — Make them stop. Make them watch.",

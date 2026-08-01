@@ -15,8 +15,15 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Beam Media home">
-        <span className="brand-mark">BM.</span>
-        <span className="brand-name">Beam Media</span>
+        <Image
+          className="official-logo official-logo-header"
+          src="/beam-media-logo-official.png"
+          alt="Beam Media"
+          width={1500}
+          height={1200}
+          sizes="90px"
+          priority
+        />
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/#work">Work</Link>
@@ -51,10 +58,11 @@ export function SiteFooter() {
     <footer>
       <div className="footer-brand">
         <Image
-          src="/beam-media-mark.jpg"
+          className="official-logo official-logo-footer"
+          src="/beam-media-logo-official.png"
           alt="Beam Media"
-          width={720}
-          height={720}
+          width={1500}
+          height={1200}
           sizes="(max-width: 760px) 70vw, 330px"
         />
         <p>Short-form content for businesses worth watching.</p>
