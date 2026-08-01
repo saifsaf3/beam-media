@@ -37,6 +37,7 @@ export function SiteHeader() {
         <nav aria-label="Primary navigation">
           <Link href="/#work">Work</Link>
           <Link href="/#services">Services</Link>
+          <Link href="/#plan">Build a plan</Link>
           <Link href="/#process">Process</Link>
           <Link href="/contact">Contact</Link>
         </nav>
@@ -49,11 +50,12 @@ export function SiteHeader() {
           <div>
             <Link href="/#work">Work <Arrow /></Link>
             <Link href="/#services">Services <Arrow /></Link>
+            <Link href="/#plan">Build a plan <Arrow /></Link>
             <Link href="/#process">Process <Arrow /></Link>
             <Link href="/contact">Contact <Arrow /></Link>
           </div>
         </details>
-        <Link className="header-cta" href="/contact">
+        <Link className="header-cta" href="/#plan">
           Start a project <Arrow />
         </Link>
       </header>

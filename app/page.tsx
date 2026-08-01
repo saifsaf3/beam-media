@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, ayubWhatsApp, SiteFooter, SiteHeader } from "./_components/SiteChrome";
+import { ProjectPlanner } from "./_components/ProjectPlanner";
 
 const tiktokPlayer = (videoId: string) =>
   `https://www.tiktok.com/player/v1/${videoId}?music_info=0&description=0&rel=0&native_context_menu=0`;
@@ -68,7 +69,7 @@ export default function Home() {
             Make them stop.<br />Make them <em>watch.</em>
           </h1>
           <div className="simple-hero-actions">
-            <Link href="/contact">Start a project <Arrow /></Link>
+            <Link href="/#plan">Build your content plan <Arrow /></Link>
             <a href="tel:+447508182314">Call Ayub · 07508 182314</a>
           </div>
           <p className="simple-hero-intro">
@@ -186,6 +187,8 @@ export default function Home() {
         </div>
       </section>
 
+      <ProjectPlanner />
+
       <section className="simple-process" id="process" aria-labelledby="process-title">
         <div>
           <p>How it works</p>
@@ -196,6 +199,36 @@ export default function Home() {
             <li key={number}><span>{number}</span><strong>{title}</strong><p>{copy}</p></li>
           ))}
         </ol>
+      </section>
+
+      <section className="simple-faq" id="faq" aria-labelledby="faq-title">
+        <div>
+          <p>Good to know</p>
+          <h2 id="faq-title">Questions.<br /><em>Answered.</em></h2>
+          <p>Still unsure? Call or WhatsApp us directly — no sales maze.</p>
+        </div>
+        <div className="faq-list">
+          <details>
+            <summary>How much does content cost?<span>+</span></summary>
+            <p>It depends on the number of videos, the shoot, location and whether you need one-off or monthly content. Build a brief above and we&apos;ll recommend the right scope.</p>
+          </details>
+          <details>
+            <summary>Do I need to know what to film?<span>+</span></summary>
+            <p>No. Tell us what your business does and what you want to achieve. We&apos;ll shape the hooks, concepts and shot plan with you.</p>
+          </details>
+          <details>
+            <summary>Can Beam Media post the videos too?<span>+</span></summary>
+            <p>We can plan content around TikTok, Reels and Shorts, then discuss whether you want ready-to-post delivery or wider social direction.</p>
+          </details>
+          <details>
+            <summary>Do you work outside Birmingham?<span>+</span></summary>
+            <p>Yes. Beam Media is based in Birmingham and works with businesses across the UK. Add your location to the project brief so we can plan travel properly.</p>
+          </details>
+          <details>
+            <summary>Can we make content every month?<span>+</span></summary>
+            <p>Yes. Choose the monthly option in the planner and we&apos;ll shape a repeatable shoot and posting rhythm around your business.</p>
+          </details>
+        </div>
       </section>
 
       <section className="simple-cta" aria-labelledby="cta-title">

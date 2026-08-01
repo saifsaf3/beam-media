@@ -118,7 +118,7 @@ export default function ContactPage() {
         <a href={ayubWhatsApp} target="_blank" rel="noreferrer">
           Start on WhatsApp <Arrow />
         </a>
-        <p>No forms. No waiting around. Speak directly to the team.</p>
+        <p>No call centres. No waiting around. Speak directly to the team.</p>
       </section>
 
       <SiteFooter />
