@@ -2,7 +2,7 @@
   --ink: #0a0a0a;
   --paper: #f2f0e9;
   --white: #ffffff;
-  --lime: #dfff00;
+  --lime: #b7c990;
   --red: #f03b24;
   --green: #15533f;
   --line: rgba(10, 10, 10, 0.2);
@@ -251,7 +251,7 @@ nav a:focus-visible::after,
   height: 8px;
   border-radius: 50%;
   background: var(--lime);
-  box-shadow: 0 0 0 6px rgba(223, 255, 0, 0.12);
+  box-shadow: 0 0 0 6px rgba(183, 201, 144, 0.12);
 }
 
 .hero h1 {
@@ -1174,7 +1174,7 @@ nav a:focus-visible::after,
   position: absolute;
   right: -2vw;
   top: 3rem;
-  color: rgba(223, 255, 0, 0.08);
+  color: rgba(183, 201, 144, 0.08);
   font-family: var(--font-display), Arial, sans-serif;
   font-size: min(44vw, 620px);
   font-weight: 900;
@@ -1450,7 +1450,7 @@ footer {
   height: 7px;
   border-radius: 50%;
   background: var(--lime);
-  box-shadow: 0 0 0 5px rgba(223, 255, 0, 0.11);
+  box-shadow: 0 0 0 5px rgba(183, 201, 144, 0.11);
 }
 
 .footer-links {
@@ -1639,10 +1639,10 @@ footer {
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
 
-/* Minimal black, white and lime system */
+/* Minimal black, white and muted sage system */
 :root {
   --paper: #f6f6f1;
-  --red: #dfff00;
+  --red: var(--lime);
   --green: #0a0a0a;
 }
 
