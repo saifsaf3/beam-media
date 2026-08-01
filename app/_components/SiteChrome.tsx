@@ -20,10 +20,25 @@ export function SiteHeader() {
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/#work">Work</Link>
+        <Link href="/#why">Why Beam</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#process">Process</Link>
         <Link href="/contact">Contact</Link>
       </nav>
+      <details className="mobile-menu">
+        <summary aria-label="Open navigation menu">
+          <span />
+          <span />
+          <span />
+        </summary>
+        <div>
+          <Link href="/#work">Work <Arrow /></Link>
+          <Link href="/#why">Why Beam <Arrow /></Link>
+          <Link href="/#services">Services <Arrow /></Link>
+          <Link href="/#process">Process <Arrow /></Link>
+          <Link href="/contact">Contact <Arrow /></Link>
+        </div>
+      </details>
       <Link className="header-cta" href="/contact">
         Start a project <Arrow />
       </Link>
@@ -43,6 +58,7 @@ export function SiteFooter() {
           sizes="(max-width: 760px) 70vw, 330px"
         />
         <p>Short-form content for businesses worth watching.</p>
+        <div className="footer-status"><span /> Birmingham · Available across the UK</div>
       </div>
       <div className="footer-links">
         <div>

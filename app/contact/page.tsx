@@ -82,6 +82,18 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="contact-brief" aria-labelledby="brief-title">
+        <div>
+          <p className="section-label">Make the first message count</p>
+          <h2 id="brief-title">Three things.<br /><em>That&apos;s it.</em></h2>
+        </div>
+        <ol>
+          <li><span>01</span><strong>Your business</strong><p>What you do, sell or serve.</p></li>
+          <li><span>02</span><strong>Your goal</strong><p>What you want the content to move.</p></li>
+          <li><span>03</span><strong>Your location</strong><p>Where we&apos;ll be bringing the cameras.</p></li>
+        </ol>
+      </section>
+
       <section className="contact-social" aria-labelledby="social-title">
         <div>
           <p className="section-label">See what we&apos;re making</p>

@@ -77,10 +77,10 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> Birmingham, UK · Short-form studio</p>
           <h1>
-            Make them
-            <span>stop.</span>
-            Make them
-            <span>watch.</span>
+            <span className="hero-line">Make them</span>
+            <span className="hero-line hero-accent">stop.</span>
+            <span className="hero-line">Make them</span>
+            <span className="hero-line hero-accent">watch.</span>
           </h1>
           <div className="hero-bottom">
             <p>
@@ -115,6 +115,34 @@ export default function Home() {
             <p>Harborne Indian Kitchen</p>
           </div>
           <p className="vertical-note">Filmed in Birmingham · Cut for the feed</p>
+          <div className="hero-proof" aria-label="Beam Media portfolio highlights">
+            <div><strong>06</strong><span>Brands featured</span></div>
+            <div><strong>05</strong><span>Live campaign edits</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="beam-code" aria-labelledby="beam-code-title">
+        <div className="beam-code-intro">
+          <p className="section-label">The Beam standard</p>
+          <h2 id="beam-code-title">Not content<br />for content&apos;s sake.</h2>
+        </div>
+        <div className="beam-code-grid">
+          <article>
+            <span>01</span>
+            <h3>Built around you</h3>
+            <p>No copy-and-paste formats. The ideas start with your product, your people and your customers.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Made for vertical</h3>
+            <p>Hooks, framing and pace designed from the first second for TikTok, Reels and Shorts.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Small team. Close work.</h3>
+            <p>You speak to the founders, stay close to the ideas and get a crew that cares about every frame.</p>
+          </article>
         </div>
       </section>
 
@@ -240,6 +268,36 @@ export default function Home() {
               <p>{item.note}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="why-beam" id="why" aria-labelledby="why-title">
+        <div className="why-beam-copy">
+          <p className="section-label">Why Beam</p>
+          <h2 id="why-title">We don&apos;t just film it.<br /><em>We find the moment.</em></h2>
+          <p>
+            The line that makes someone laugh. The food shot that makes them hungry.
+            The face behind the business they remember later. That&apos;s the difference
+            between something posted and something watched.
+          </p>
+          <Link href="/contact">Bring us your business <Arrow /></Link>
+        </div>
+        <div className="why-beam-stack" aria-label="Beam Media creative approach">
+          <article className="stack-card stack-lime">
+            <span>HOOK</span>
+            <h3>Earn the first second.</h3>
+            <p>Give people a reason to stop before asking them to care.</p>
+          </article>
+          <article className="stack-card stack-red">
+            <span>STORY</span>
+            <h3>Make the brand human.</h3>
+            <p>Products matter. Personality makes people remember them.</p>
+          </article>
+          <article className="stack-card stack-white">
+            <span>CUT</span>
+            <h3>Keep every frame working.</h3>
+            <p>No dead space. Just pace, clarity and a clean finish.</p>
+          </article>
         </div>
       </section>
 
