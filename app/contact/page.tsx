@@ -4,7 +4,7 @@ import { anasWhatsApp, Arrow, ayubWhatsApp, SiteFooter, SiteHeader } from "../_c
 export const metadata: Metadata = {
   title: "Contact Beam Media",
   description:
-    "Contact Beam Media founders Ayub Ahmad and Anasur Rahman about short-form video, social content and brand campaigns in Birmingham and across the UK.",
+    "Contact Beam Media founders Ayub Ahmed and Anasur Rahman about short-form video, social content and brand campaigns in Birmingham and across the UK.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Beam Media — Let’s make your business unmissable",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const founders = [
   {
     initials: "AA",
-    name: "Ayub Ahmad",
+    name: "Ayub Ahmed",
     role: "Founder",
     displayNumber: "+44 7508 182314",
     callNumber: "+447508182314",
