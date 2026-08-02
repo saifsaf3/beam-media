@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://beam-media.vercel.app"),
+  metadataBase: new URL("https://beammedia.agency"),
   title: {
     default: "Beam Media | Short-form content for Birmingham businesses",
     template: "%s | Beam Media",
