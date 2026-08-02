@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { anasWhatsApp, Arrow, ayubWhatsApp, SiteFooter, SiteHeader } from "../_components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Contact Beam Media",
+  title: "Contact Our Birmingham Content Team",
   description:
-    "Contact Beam Media founders Ayub Ahmed and Anasur Rahman about short-form video, social content and brand campaigns in Birmingham and across the UK.",
+    "Contact Beam Media in Birmingham for short-form video, restaurant content, social media campaigns and brand photography across the UK.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Beam Media — Let’s make your business unmissable",
