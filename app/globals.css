@@ -2602,3 +2602,174 @@ footer {
   .result-copy h3 { font-size: clamp(2.5rem, 12.5vw, 3.8rem); }
   .planner-plan-grid button { min-height: 145px; }
 }
+
+/* Phone-first refinement: compact controls, clearer rhythm and less obstruction. */
+@media (max-width: 800px) {
+  body {
+    padding-bottom: calc(58px + env(safe-area-inset-bottom));
+  }
+
+  .contact-strip {
+    min-height: 50px;
+    padding: 0.45rem 1rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
+  .contact-strip p {
+    grid-column: auto;
+    min-width: 0;
+    font-size: 0.58rem;
+    letter-spacing: 0.07em;
+  }
+
+  .contact-strip p span {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 auto;
+  }
+
+  .contact-strip > a:not(.contact-strip-whatsapp) {
+    display: none;
+  }
+
+  .contact-strip .contact-strip-whatsapp {
+    grid-column: auto;
+    min-height: 34px;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.58rem;
+  }
+
+  .simple-hero-copy {
+    padding: 3.25rem 1.25rem 2.75rem;
+  }
+
+  .simple-kicker {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .simple-hero h1 {
+    max-width: 100%;
+    margin: 1.6rem 0;
+    font-size: clamp(3rem, 14vw, 4.6rem);
+    line-height: 0.86;
+  }
+
+  .simple-hero-intro {
+    margin-top: 1.6rem;
+  }
+
+  .simple-hero-visual {
+    min-height: clamp(390px, 118vw, 480px);
+  }
+
+  .simple-client-strip {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .results-work,
+  .simple-services,
+  .more-work,
+  .simple-process,
+  .project-planner,
+  .simple-faq {
+    padding: 4.25rem 1.25rem;
+  }
+
+  .simple-section-heading {
+    gap: 1rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .result-case,
+  .result-case:nth-child(even) {
+    gap: 2rem;
+    padding: 3.25rem 0;
+  }
+
+  .result-video {
+    min-height: 0;
+    padding: 0.75rem;
+  }
+
+  .result-copy h3 {
+    margin: 1.5rem 0;
+  }
+
+  .simple-service-grid article {
+    min-height: 210px;
+    padding: 1.5rem;
+  }
+
+  .planner-form fieldset,
+  .planner-summary {
+    padding: 1.25rem;
+  }
+
+  .faq-list summary {
+    min-height: 64px;
+    gap: 1rem;
+  }
+
+  .simple-cta {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .simple-cta h2 {
+    font-size: clamp(3.25rem, 16vw, 5.25rem);
+  }
+
+  .mobile-contact-dock {
+    height: calc(58px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .contact-hero {
+    min-height: 610px;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .contact-page h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .contact-hero .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+
+  .contact-team,
+  .contact-brief,
+  .contact-social,
+  .contact-final {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .founder-card {
+    min-height: 370px;
+    box-shadow: 8px 9px 0 var(--ink);
+  }
+
+  footer {
+    padding: 4.25rem 1.25rem 2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .contact-strip p {
+    font-size: 0.55rem;
+  }
+
+  .contact-strip .contact-strip-whatsapp {
+    font-size: 0.55rem;
+  }
+
+  .simple-hero h1 {
+    font-size: clamp(2.7rem, 14vw, 3.8rem);
+  }
+
+  .result-copy h3 {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+}
