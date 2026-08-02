@@ -1,11 +1,11 @@
 :root {
-  --ink: #0a0a0a;
+  --ink: #000000;
   --paper: #f2f0e9;
   --white: #ffffff;
   --lime: #b7c990;
   --red: #f03b24;
   --green: #15533f;
-  --line: rgba(10, 10, 10, 0.2);
+  --line: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -1643,7 +1643,7 @@ footer {
 :root {
   --paper: #f6f6f1;
   --red: var(--lime);
-  --green: #0a0a0a;
+  --green: var(--ink);
 }
 
 .contact-strip {
@@ -1811,7 +1811,7 @@ footer {
 
 .simple-hero-visual > img {
   object-fit: cover;
-  object-position: center top;
+  object-position: center 38%;
 }
 
 .simple-hero-visual::after {
@@ -1819,35 +1819,6 @@ footer {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.72));
-}
-
-.simple-hero-phone {
-  position: absolute;
-  z-index: 2;
-  right: 5%;
-  bottom: 8%;
-  width: min(34%, 210px);
-  aspect-ratio: 9 / 16;
-  border: 6px solid var(--ink);
-  box-shadow: 10px 12px 0 var(--lime);
-  overflow: hidden;
-}
-
-.simple-hero-phone img { object-fit: cover; }
-
-.simple-hero-phone span {
-  position: absolute;
-  z-index: 2;
-  inset: 50% auto auto 50%;
-  transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--white);
-  color: var(--ink);
-  font-size: 0.72rem;
 }
 
 .simple-hero-visual > p {
@@ -2537,8 +2508,6 @@ footer {
     border-left: 0;
     border-top: 2px solid var(--white);
   }
-  .simple-hero-phone { width: min(35%, 165px); right: 5%; bottom: 9%; border-width: 4px; }
-
   .simple-client-strip { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.25rem; }
   .simple-client-strip > div { justify-content: flex-start; }
 

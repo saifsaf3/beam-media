@@ -28,11 +28,7 @@ const featuredWork = [
     videoId: "7667116178875157782",
     videoUrl: "https://www.tiktok.com/@beammedia0/video/7667116178875157782",
     copy: "Cinematic food shots and chef-led personality brought the restaurant to life with warm, entertaining local content.",
-    results: [
-      ["967+", "Views"],
-      ["52", "Likes"],
-      ["8", "Shares"],
-    ],
+    results: null,
     services: ["Food videography", "Concept development", "Social editing"],
   },
 ];
@@ -85,15 +81,6 @@ export default function Home() {
             sizes="(max-width: 800px) 100vw, 45vw"
             priority
           />
-          <div className="simple-hero-phone">
-            <Image
-              src="/harborne-indian-kitchen.jpg"
-              alt="Beam Media food content for Harborne Indian Kitchen"
-              fill
-              sizes="(max-width: 800px) 34vw, 15vw"
-            />
-            <span aria-hidden="true">▶</span>
-          </div>
           <p>Real businesses · Real content · Birmingham</p>
         </div>
       </section>
@@ -134,11 +121,13 @@ export default function Home() {
                 <div className="result-label"><span>{work.number}</span><p>{work.type}</p></div>
                 <h3>{work.name}</h3>
                 <p className="result-description">{work.copy}</p>
-                <div className="result-metrics" aria-label={`${work.name} TikTok results`}>
-                  {work.results.map(([value, label]) => (
-                    <div key={label}><strong>{value}</strong><span>{label}</span></div>
-                  ))}
-                </div>
+                {work.results ? (
+                  <div className="result-metrics" aria-label={`${work.name} TikTok results`}>
+                    {work.results.map(([value, label]) => (
+                      <div key={label}><strong>{value}</strong><span>{label}</span></div>
+                    ))}
+                  </div>
+                ) : null}
                 <ul aria-label="Services provided">
                   {work.services.map((service) => <li key={service}>{service}</li>)}
                 </ul>
