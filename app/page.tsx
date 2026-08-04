@@ -6,12 +6,16 @@ import { ProjectPlanner } from "./_components/ProjectPlanner";
 const tiktokPlayer = (videoId: string) =>
   `https://www.tiktok.com/player/v1/${videoId}?music_info=0&description=0&rel=0&native_context_menu=0`;
 
+const facebookPlayer = (reelId: string) =>
+  `https://www.facebook.com/plugins/video.php?height=640&href=${encodeURIComponent(`https://www.facebook.com/reel/${reelId}/`)}&show_text=false&width=360`;
+
 const featuredWork = [
   {
     number: "01",
     name: "Equipment Bazaar",
     type: "Retail · Catering equipment",
-    videoId: "7666945026273840406",
+    platform: "TikTok",
+    embedUrl: tiktokPlayer("7666945026273840406"),
     videoUrl: "https://www.tiktok.com/@equipmentbazaar/video/7666945026273840406",
     copy: "A clear, personality-led guide to the equipment needed to open a chicken shop — useful specialist knowledge turned into content people wanted to save and share.",
     results: [
@@ -25,10 +29,15 @@ const featuredWork = [
     number: "02",
     name: "Harborne Indian Kitchen",
     type: "Hospitality · Indian restaurant",
-    videoId: "7667116178875157782",
-    videoUrl: "https://www.tiktok.com/@beammedia0/video/7667116178875157782",
-    copy: "Cinematic food shots and chef-led personality brought the restaurant to life with warm, entertaining local content.",
-    results: null,
+    platform: "Facebook",
+    embedUrl: facebookPlayer("1834823741029907"),
+    videoUrl: "https://www.facebook.com/reel/1834823741029907/",
+    copy: "Rich food close-ups, confident pacing and a direct invitation to experience authentic Indian cooking turned a restaurant showcase into a 20K-view local hit.",
+    results: [
+      ["20K+", "Views"],
+      ["86", "Reactions"],
+      ["7", "Shares"],
+    ],
     services: ["Food videography", "Concept development", "Social editing"],
   },
 ];
@@ -102,7 +111,7 @@ export default function Home() {
         <div className="simple-section-heading">
           <p>Selected work</p>
           <h2 id="work-title">The work.<br /><em>And the result.</em></h2>
-          <p>Real videos from the Beam Media TikTok, with public figures checked in August 2026.</p>
+          <p>Real work across TikTok and Facebook, with public figures checked in August 2026.</p>
         </div>
 
         <div className="result-case-list">
@@ -110,10 +119,10 @@ export default function Home() {
             <article className="result-case" key={work.name}>
               <div className="result-video">
                 <iframe
-                  src={tiktokPlayer(work.videoId)}
-                  title={`Beam Media TikTok for ${work.name}`}
+                  src={work.embedUrl}
+                  title={`Beam Media ${work.platform} video for ${work.name}`}
                   loading="lazy"
-                  allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+                  allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   allowFullScreen
                 />
               </div>
@@ -122,7 +131,7 @@ export default function Home() {
                 <h3>{work.name}</h3>
                 <p className="result-description">{work.copy}</p>
                 {work.results ? (
-                  <div className="result-metrics" aria-label={`${work.name} TikTok results`}>
+                  <div className="result-metrics" aria-label={`${work.name} ${work.platform} results`}>
                     {work.results.map(([value, label]) => (
                       <div key={label}><strong>{value}</strong><span>{label}</span></div>
                     ))}
@@ -131,8 +140,8 @@ export default function Home() {
                 <ul aria-label="Services provided">
                   {work.services.map((service) => <li key={service}>{service}</li>)}
                 </ul>
-                <a className="view-tiktok" href={work.videoUrl} target="_blank" rel="noreferrer">
-                  Open on TikTok <Arrow />
+                <a className="view-social" href={work.videoUrl} target="_blank" rel="noreferrer">
+                  Open on {work.platform} <Arrow />
                 </a>
               </div>
             </article>
