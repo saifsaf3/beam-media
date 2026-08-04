@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { DM_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -151,6 +152,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
