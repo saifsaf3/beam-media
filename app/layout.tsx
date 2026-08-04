@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -151,6 +152,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
