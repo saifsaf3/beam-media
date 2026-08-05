@@ -52,6 +52,7 @@ main {
 .contact-social,
 .contact-final,
 .goal-finder,
+.beam-notes,
 .results-work,
 .more-work,
 .simple-services,
@@ -2170,6 +2171,47 @@ footer {
   text-transform: uppercase;
 }
 
+.beam-notes {
+  padding: clamp(5rem, 8vw, 9rem) 5vw;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 0.34fr 0.66fr;
+  gap: clamp(3rem, 7vw, 8rem);
+}
+
+.beam-notes-heading > p:first-child {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.beam-notes-heading h2 {
+  margin: 2.25rem 0;
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: clamp(3rem, 5.3vw, 6rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.beam-notes-heading h2 em { color: var(--green); font-style: italic; }
+.beam-notes-heading > p:last-child { max-width: 430px; margin: 0; color: rgba(10, 10, 10, 0.64); line-height: 1.6; }
+.beam-notes-list { border-top: 2px solid var(--ink); }
+.beam-notes-list details { border-bottom: 1px solid rgba(10, 10, 10, 0.3); }
+.beam-notes-list summary { min-height: 144px; display: grid; grid-template-columns: 0.12fr 1fr auto; gap: 1rem; align-items: start; padding: 1.45rem 0; cursor: pointer; list-style: none; }
+.beam-notes-list summary::-webkit-details-marker { display: none; }
+.beam-notes-list summary > span { color: rgba(10, 10, 10, 0.48); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; }
+.beam-notes-list summary small { display: block; margin-bottom: 0.75rem; color: rgba(10, 10, 10, 0.56); font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+.beam-notes-list summary h3 { max-width: 18ch; margin: 0; font-family: var(--font-display), Arial, sans-serif; font-size: clamp(1.4rem, 2.4vw, 2.5rem); line-height: 0.94; letter-spacing: -0.05em; text-transform: uppercase; }
+.beam-notes-list summary b { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-size: 1.3rem; font-weight: 400; transition: transform 180ms ease; }
+.beam-notes-list details[open] summary b { transform: rotate(45deg); background: var(--lime); }
+.beam-note-body { margin: -0.5rem 3rem 1.6rem 12%; max-width: 680px; }
+.beam-note-body p { margin: 0 0 0.9rem; color: rgba(10, 10, 10, 0.66); line-height: 1.65; }
+.beam-note-body p:first-child { color: var(--ink); font-size: 1.04rem; font-weight: 700; }
+.beam-note-body a { width: fit-content; display: flex; gap: 1.75rem; align-items: center; margin-top: 1.25rem; padding: 0.75rem 0.85rem; background: var(--ink); color: var(--white); font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+
 .simple-services {
   background: var(--ink);
   color: var(--white);
@@ -2653,6 +2695,7 @@ footer {
   .result-metrics strong { font-size: clamp(1.6rem, 8vw, 2.7rem); }
 
   .more-work,
+  .beam-notes,
   .simple-process,
   .project-planner,
   .simple-faq {
@@ -2669,6 +2712,11 @@ footer {
 
   .more-work-list a { grid-template-columns: 0.14fr 1fr auto; }
   .more-work-list small { grid-column: 2; }
+
+  .beam-notes-heading h2 { font-size: clamp(3.1rem, 14vw, 5rem); }
+  .beam-notes-list summary { min-height: 0; grid-template-columns: 0.12fr 1fr auto; padding: 1.25rem 0; }
+  .beam-notes-list summary h3 { max-width: 14ch; font-size: clamp(1.35rem, 6.2vw, 2rem); }
+  .beam-note-body { margin: 0 0 1.5rem 12%; }
 
   .simple-service-grid { grid-template-columns: 1fr; }
   .simple-service-grid article,
@@ -2792,6 +2840,7 @@ footer {
   .results-work,
   .simple-services,
   .more-work,
+  .beam-notes,
   .simple-process,
   .project-planner,
   .simple-faq {
