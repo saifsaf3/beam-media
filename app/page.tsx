@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, ayubWhatsApp, SiteFooter, SiteHeader } from "./_components/SiteChrome";
+import { GoalFinder } from "./_components/GoalFinder";
 import { ProjectPlanner } from "./_components/ProjectPlanner";
 
 const tiktokPlayer = (videoId: string) =>
@@ -106,6 +107,8 @@ export default function Home() {
           <span>Rajbari</span>
         </div>
       </section>
+
+      <GoalFinder />
 
       <section className="results-work" id="work" aria-labelledby="work-title">
         <div className="simple-section-heading">
