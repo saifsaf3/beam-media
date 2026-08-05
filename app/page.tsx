@@ -56,30 +56,6 @@ const services = [
   ["04", "Social direction", "A clear repeatable content plan built around your business."],
 ];
 
-const insights = [
-  {
-    number: "01",
-    tag: "Local growth",
-    title: "What should a Birmingham business post on TikTok?",
-    intro: "Start with the real reason someone should visit, buy or remember you — not a trend for the sake of it.",
-    body: "For restaurants, that might be the dish people travel for. For shops, it is the product that solves a real problem. For services, it is the question customers ask before they trust someone. The strongest local content is clear, useful and feels like a person made it.",
-  },
-  {
-    number: "02",
-    tag: "Shoot planning",
-    title: "How many videos should one content shoot create?",
-    intro: "One focused shoot should give you more than one post — it should give your business a content bank.",
-    body: "A good content day normally gives you around six useful short videos: a hero video, product or food close-ups, a people-led clip, a practical answer, an offer and something more casual. That gives you enough variety to post consistently without needing to film every week.",
-  },
-  {
-    number: "03",
-    tag: "Building trust",
-    title: "Why people should appear in your business content",
-    intro: "Customers buy from people they recognise and trust — especially when they are choosing a local business.",
-    body: "You do not need to perform or become an influencer. A quick introduction, a real answer or a glimpse of the work is enough. Showing the owner, chef, team or craft behind the business gives viewers a reason to care before they ever walk through the door.",
-  },
-];
-
 const process = [
   ["01", "Quick chat", "Tell us what you sell, who it is for and what you want to push."],
   ["02", "Ideas", "We shape the hooks and a focused plan for the shoot."],
@@ -191,30 +167,6 @@ export default function Home() {
             >
               <span>0{index + 3}</span><strong>{name}</strong><small>{type}</small><Arrow />
             </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="beam-notes" id="notes" aria-labelledby="notes-title">
-        <div className="beam-notes-heading">
-          <p>Beam Notes</p>
-          <h2 id="notes-title">Useful ideas.<br /><em>No waffle.</em></h2>
-          <p>Short, practical notes for Birmingham businesses that want content to actually do something.</p>
-        </div>
-        <div className="beam-notes-list">
-          {insights.map((insight) => (
-            <details key={insight.number}>
-              <summary>
-                <span>{insight.number}</span>
-                <div><small>{insight.tag}</small><h3>{insight.title}</h3></div>
-                <b aria-hidden="true">+</b>
-              </summary>
-              <div className="beam-note-body">
-                <p>{insight.intro}</p>
-                <p>{insight.body}</p>
-                <a href="#plan">Build a plan with Beam <Arrow /></a>
-              </div>
-            </details>
           ))}
         </div>
       </section>
