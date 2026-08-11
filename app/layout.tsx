@@ -143,7 +143,11 @@ const structuredData = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${montserrat.variable}`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${montserrat.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <script
           type="application/ld+json"

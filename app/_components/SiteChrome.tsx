@@ -37,6 +37,7 @@ export function SiteHeader() {
         <nav aria-label="Primary navigation">
           <Link href="/#work">Work</Link>
           <Link href="/#services">Services</Link>
+          <Link href="/pre-made-packages">Packages</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/#plan">Build a plan</Link>
           <Link href="/#process">Process</Link>
@@ -51,6 +52,7 @@ export function SiteHeader() {
           <div>
             <Link href="/#work">Work <Arrow /></Link>
             <Link href="/#services">Services <Arrow /></Link>
+            <Link href="/pre-made-packages">Pre-Made Packages <Arrow /></Link>
             <Link href="/blog">Blog <Arrow /></Link>
             <Link href="/#plan">Build a plan <Arrow /></Link>
             <Link href="/#process">Process <Arrow /></Link>
@@ -90,6 +92,11 @@ export function SiteFooter() {
             <a href="https://www.instagram.com/beammedia_/?hl=en" target="_blank" rel="noreferrer">
               Instagram <Arrow />
             </a>
+          </div>
+          <div>
+            <p>Explore</p>
+            <Link href="/pre-made-packages">Pre-Made Packages <Arrow /></Link>
+            <Link href="/blog">Blog <Arrow /></Link>
           </div>
           <div>
             <p>Contact</p>
