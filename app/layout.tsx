@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { DM_Sans, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -149,6 +150,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       data-scroll-behavior="smooth"
     >
       <body>
+        <Script id="beam-palette-preference" strategy="beforeInteractive">
+          {`try{var palette=localStorage.getItem("beam-media-palette-v1");if(["aurora","orchid","lagoon","sunset"].includes(palette)){document.documentElement.dataset.beamPalette=palette}}catch(error){}`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

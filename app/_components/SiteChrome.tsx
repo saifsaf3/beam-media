@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GradientSwitcher } from "./GradientSwitcher";
 
 export const ayubWhatsApp =
   "https://wa.me/447508182314?text=Hey%20Beam%20Media%20%E2%80%94%20I%27d%20love%20to%20talk%20about%20content%20for%20my%20business.";
@@ -14,6 +15,7 @@ export function Arrow() {
 export function SiteHeader() {
   return (
     <>
+      <GradientSwitcher />
       <aside className="contact-strip" aria-label="Quick contact">
         <p><span /> Speak to Beam Media</p>
         <a href="tel:+447508182314"><strong>Ayub</strong> 07508 182314</a>
