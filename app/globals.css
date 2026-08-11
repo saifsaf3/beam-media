@@ -2,9 +2,14 @@
   --ink: #000000;
   --paper: #f2f0e9;
   --white: #ffffff;
-  --lime: #b7c990;
-  --red: #f03b24;
-  --green: #15533f;
+  --aurora-mint: #b9f5d8;
+  --aurora-blue: #5b8def;
+  --aurora-deep: #243f70;
+  --lime: var(--aurora-mint);
+  --red: var(--aurora-blue);
+  --green: var(--aurora-deep);
+  --beam-gradient: linear-gradient(145deg, #b9f5d8 0%, #8fc9e7 48%, #5b8def 100%);
+  --beam-gradient-dark: linear-gradient(145deg, #090d18 0%, #182a4a 48%, #315b9d 100%);
   --line: rgba(0, 0, 0, 0.2);
 }
 
@@ -253,7 +258,7 @@ nav a:focus-visible::after,
   height: 8px;
   border-radius: 50%;
   background: var(--lime);
-  box-shadow: 0 0 0 6px rgba(183, 201, 144, 0.12);
+  box-shadow: 0 0 0 6px rgba(91, 141, 239, 0.16);
 }
 
 .hero h1 {
@@ -1176,7 +1181,7 @@ nav a:focus-visible::after,
   position: absolute;
   right: -2vw;
   top: 3rem;
-  color: rgba(183, 201, 144, 0.08);
+  color: rgba(91, 141, 239, 0.1);
   font-family: var(--font-display), Arial, sans-serif;
   font-size: min(44vw, 620px);
   font-weight: 900;
@@ -1452,7 +1457,7 @@ footer {
   height: 7px;
   border-radius: 50%;
   background: var(--lime);
-  box-shadow: 0 0 0 5px rgba(183, 201, 144, 0.11);
+  box-shadow: 0 0 0 5px rgba(91, 141, 239, 0.15);
 }
 
 .footer-links {
@@ -1642,11 +1647,9 @@ footer {
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
 
-/* Minimal black, white and muted sage system */
+/* Minimal black, white and Aurora system */
 :root {
   --paper: #f6f6f1;
-  --red: var(--lime);
-  --green: var(--ink);
 }
 
 .contact-strip {
@@ -3062,7 +3065,7 @@ footer {
   position: absolute;
   right: 3vw;
   bottom: -0.13em;
-  color: rgba(183, 201, 144, 0.075);
+  color: rgba(91, 141, 239, 0.1);
   font: 900 clamp(15rem, 36vw, 40rem)/0.8 var(--font-display), Arial, sans-serif;
   pointer-events: none;
 }
@@ -3512,4 +3515,68 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   .package-card { animation: none; transition: none; }
+}
+
+/* Aurora palette — inspired by Beam's selected mint-to-blue reference. */
+.mobile-menu > div,
+.header-cta,
+.hero-project-cta,
+.hero-visual,
+.ticker,
+.feed-lime,
+.stack-lime,
+.service-card:hover,
+.cta,
+.founder-card.lime,
+.contact-final,
+.contact-strip,
+.simple-hero-actions a:first-child,
+.simple-client-strip,
+.goal-finder-businesses button:hover,
+.goal-finder-businesses button.is-selected,
+.goal-finder-result,
+.result-metrics,
+.beam-notes-list details[open] summary b,
+.article-cta a,
+.planner-choice-grid button.is-selected,
+.planner-plan-grid button.is-selected,
+.planner-summary-actions button,
+.simple-cta,
+.mobile-contact-dock a:last-child,
+.packages-hero-actions a:first-child,
+.custom-package > a,
+.package-growth,
+.package-card aside,
+.package-scale > a,
+.compare-grid article.recommended,
+.monthly-why,
+.packages-final {
+  background: var(--beam-gradient);
+}
+
+.green-media,
+.feed-green,
+.contact-social,
+.blog-cta,
+.custom-package {
+  background: var(--beam-gradient-dark);
+}
+
+.packages-final {
+  color: var(--ink);
+}
+
+.packages-final a:first-child {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+.packages-final a:last-child {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.package-growth .package-label {
+  background: var(--aurora-deep);
 }
