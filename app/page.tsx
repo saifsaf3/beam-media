@@ -115,7 +115,7 @@ export default function Home() {
         <div className="simple-section-heading">
           <p>Selected work</p>
           <h2 id="work-title">The work.<br /><em>And the result.</em></h2>
-          <p>Real work across TikTok and Facebook, with public figures checked in August 2026.</p>
+          <p>Real work across social content, local brands and live community events.</p>
         </div>
 
         <div className="result-case-list">
@@ -214,9 +214,12 @@ export default function Home() {
               rel="noreferrer"
               key={name}
             >
-              <span>0{index + 3}</span><strong>{name}</strong><small>{type}</small><Arrow />
+              <span>0{index + 4}</span><strong>{name}</strong><small>{type}</small><Arrow />
             </a>
           ))}
+          <Link href="/work/liquid-print">
+            <span>07</span><strong>Liquid Print</strong><small>Print · Staff-led brand content</small><Arrow />
+          </Link>
         </div>
       </section>
 

@@ -4068,3 +4068,33 @@ footer {
   .event-project-facts > div:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--ink); }
   .event-project-facts > div:last-child { border-bottom: 0; }
 }
+
+/* Liquid Print project refinements */
+.liquid-project-hero h1 { max-width: 8ch; }
+.liquid-project-hero-image img { object-position: center 34%; }
+
+.liquid-project-source a {
+  width: fit-content;
+  margin-top: 1.2rem;
+  padding-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--ink);
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.liquid-project-gallery-card > div { min-height: 760px !important; }
+.liquid-project-gallery-card img { object-position: center; }
+
+@media (max-width: 800px) {
+  .liquid-project-gallery-card > div { min-height: 560px !important; }
+  .liquid-project-source a { width: 100%; justify-content: space-between; }
+}
+
+@media (max-width: 390px) {
+  .liquid-project-gallery-card > div { min-height: 500px !important; }
+}
