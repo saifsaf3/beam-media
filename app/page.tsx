@@ -105,6 +105,7 @@ export default function Home() {
           <span>Kiran’s Balti</span>
           <span>Liquid Print</span>
           <span>Rajbari</span>
+          <span>Shongo Shomithi</span>
         </div>
       </section>
 
@@ -149,6 +150,54 @@ export default function Home() {
               </div>
             </article>
           ))}
+          <article className="result-case event-result-case">
+            <div className="event-result-gallery" aria-label="Beam Media at the Bangla Community Day press conference">
+              <div className="event-result-photo event-result-photo-main">
+                <Image
+                  src="/work/bangla-community-day/press-conference-wide.jpeg"
+                  alt="Official press conference for Walsall's first Bangla Community Day"
+                  fill
+                  sizes="(max-width: 800px) 100vw, 34vw"
+                />
+              </div>
+              <div className="event-result-photo">
+                <Image
+                  src="/work/bangla-community-day/beam-camera-bts.jpeg"
+                  alt="Beam Media camera filming the press conference"
+                  fill
+                  sizes="(max-width: 800px) 48vw, 16vw"
+                />
+              </div>
+              <div className="event-result-photo">
+                <Image
+                  src="/work/bangla-community-day/speaker-coverage.jpeg"
+                  alt="Speaker being filmed at the Bangla Community Day press conference"
+                  fill
+                  sizes="(max-width: 800px) 48vw, 16vw"
+                />
+              </div>
+            </div>
+            <div className="result-copy">
+              <div className="result-label"><span>03</span><p>Community · Event coverage</p></div>
+              <h3>Bangla Community Day</h3>
+              <p className="result-description">
+                Beam Media covered the official press conference for Walsall&apos;s first-ever Bangla Community Day, capturing the panel, speakers and room alongside Channel S.
+              </p>
+              <div className="event-result-proof">
+                <div><strong>Official</strong><span>Press conference</span></div>
+                <div><strong>Alongside</strong><span>Channel S</span></div>
+                <div><strong>Walsall</strong><span>Community coverage</span></div>
+              </div>
+              <ul aria-label="Services provided">
+                <li>Event videography</li>
+                <li>Speaker coverage</li>
+                <li>Behind the scenes</li>
+              </ul>
+              <Link className="view-social" href="/work/bangla-community-day">
+                View the case study <Arrow />
+              </Link>
+            </div>
+          </article>
         </div>
       </section>
 
