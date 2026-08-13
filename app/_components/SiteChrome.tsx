@@ -37,7 +37,7 @@ export function SiteHeader() {
           />
         </Link>
         <nav aria-label="Primary navigation">
-          <Link href="/#work">Work</Link>
+          <Link href="/work">Case studies</Link>
           <Link href="/#services">Services</Link>
           <Link href="/pre-made-packages">Packages</Link>
           <Link href="/blog">Blog</Link>
@@ -52,7 +52,7 @@ export function SiteHeader() {
             <span />
           </summary>
           <div>
-            <Link href="/#work">Work <Arrow /></Link>
+            <Link href="/work">Case studies <Arrow /></Link>
             <Link href="/#services">Services <Arrow /></Link>
             <Link href="/pre-made-packages">Pre-Made Packages <Arrow /></Link>
             <Link href="/blog">Blog <Arrow /></Link>
@@ -97,6 +97,7 @@ export function SiteFooter() {
           </div>
           <div>
             <p>Explore</p>
+            <Link href="/work">Case Studies <Arrow /></Link>
             <Link href="/pre-made-packages">Pre-Made Packages <Arrow /></Link>
             <Link href="/blog">Blog <Arrow /></Link>
           </div>

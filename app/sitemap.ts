@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/work`,
+      lastModified: new Date("2026-08-13"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/work/bangla-community-day`,
       lastModified: new Date("2026-08-13"),
       changeFrequency: "monthly",

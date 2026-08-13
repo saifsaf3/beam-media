@@ -284,6 +284,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="case-study-index-cta" aria-labelledby="case-study-index-title">
+        <div className="case-study-index-copy">
+          <p>Case studies</p>
+          <h2 id="case-study-index-title">See how the work<br /><em>comes together.</em></h2>
+          <p>
+            Go beyond the final post. See the idea, the shoot and the thinking behind work for local brands and community events.
+          </p>
+          <Link href="/work">View all case studies <Arrow /></Link>
+        </div>
+        <div className="case-study-index-preview">
+          <Link href="/work/bangla-community-day">
+            <span>Event coverage</span>
+            <strong>Bangla Community Day</strong>
+            <Arrow />
+          </Link>
+          <Link href="/work/liquid-print">
+            <span>Staff-led brand content</span>
+            <strong>Liquid Print</strong>
+            <Arrow />
+          </Link>
+          <Link className="case-study-index-all" href="/work">
+            <span>Social · Food · Retail · Events</span>
+            <strong>Explore every project</strong>
+            <Arrow />
+          </Link>
+        </div>
+      </section>
+
       <section className="simple-cta" aria-labelledby="cta-title">
         <p>Ready when you are</p>
         <h2 id="cta-title">Need content?<br />Talk to us.</h2>
